@@ -18,10 +18,13 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+
 	vertical-align: baseline;
+
+	border: 0;
+
+	font: inherit;
+	font-size: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -43,27 +46,135 @@ q:before, q:after {
 	content: none;
 }
 table {
-	border-collapse: collapse;
 	border-spacing: 0;
+
+	border-collapse: collapse;
 }
 
 /* My styles */
-body {
-  /* background-image: url(dc-online-media-mockup.jpg);
-  background-size: 800px 20624px;
-  background-position: top center;
-  background-repeat: no-repeat; */
+* {
+  box-sizing: border-box;
 }
-h1, h2, h3, p {
-	width: 700px;
-	margin: 0 auto;
-}
-h1 + p {
-	color: rgba(0,0,0,0.5);
-}
-p + p {
-	margin-bottom: 52px;
-}
+
 a {
-	color: inherit;
+  color: inherit;
+}
+
+body {
+  background-color: #FAFAFA;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+
+  font-family: 'PT Sans', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 16px;
+
+  font-size: 40px;
+  line-height: 46px;
+}
+
+h1 + p {
+  margin-top: 14px;
+
+  color: rgba(0, 0, 0, .4);
+
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h2 {
+  margin-top: 43px;
+
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h2 + p {
+  margin-top: 7px;
+}
+
+h3 {
+  margin-top: 36px;
+
+  font-size: 28px;
+  line-height: 34px;
+}
+
+h3 + p {
+  margin-top: 6px;
+}
+
+p,
+blockquote,
+li {
+  font-size: 22px;
+  line-height: 34px;
+}
+
+blockquote {
+  position: relative;
+
+  font-style: italic;
+}
+
+blockquote::before {
+  position: absolute;
+  top: 0;
+  left: -20px;
+
+  display: block;
+
+  width: 3px;
+  height: 100%;
+
+  content: '';
+
+  background-color: rgba(0,0,0,.8);
+}
+
+p + p,
+p + blockquote,
+blockquote + p,
+blockquote + blockquote {
+  margin-top: 29px;
+}
+
+ul {
+  margin: 29px auto;
+
+	list-style-type: disc;
+}
+
+li {
+  margin: 17px 0 17px 30px;
+}
+
+img + h2 {
+  margin-top: -1px;
+}
+
+img + p,
+img + blockquote,
+img + ul {
+  margin-top: -3px;
+}
+
+h2 + img {
+  margin-top: 82px;
+}
+
+h3 + img {
+  margin-top: 81px;
 }
